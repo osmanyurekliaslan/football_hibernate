@@ -1,0 +1,24 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- mysql:mysql-connector-mxj:5.0.12 -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!--  For performance reasons changed to MyISAM from org.hibernate.dialect.MySQLInnoDBDialect  -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <!--  Database Settings  -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hiber1</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">11235</property>
+        <!--  Properties  -->
+        <property name="hibernate.connection.autocommit">true</property>
+        <property name="hibernate.hbm2ddl.auto">none</property>
+        <property name="hibernate.show_sql">true</property>
+
+
+        <mapping class ="com.turktrust.football_hibernate.entities.Footballers"></mapping>
+        <mapping class ="com.turktrust.football_hibernate.entities.Teams"></mapping>
+        <mapping class ="com.turktrust.football_hibernate.entities.TeamHistory"></mapping>
+
+
+
+    </session-factory>
+</hibernate-configuration>
